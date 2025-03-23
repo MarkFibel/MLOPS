@@ -1,0 +1,2 @@
+# MLOPS
+MLOPS seminars task
