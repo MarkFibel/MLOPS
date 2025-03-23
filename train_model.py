@@ -1,5 +1,6 @@
 
 from os import name
+import os
 from sklearn.preprocessing import StandardScaler, PowerTransformer
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -29,6 +30,10 @@ def eval_metrics(actual, pred):
 
 
 if __name__ == "__main__":
+    if os.isfile("./df_clear.csv"):
+        df = pd.read_csv("./df_clear.csv")
+    else:
+        assert 'DataFrame not Found'
     df = pd.read_csv("./df_clear.csv")
     X,Y, power_trans = scale_frame(df)
     X_train, X_val, y_train, y_val = train_test_split(X, Y,
