@@ -30,7 +30,7 @@ def eval_metrics(actual, pred):
 
 
 if __name__ == "__main__":
-    if os.isfile("./df_clear.csv"):
+    if os.path.isfile("./df_clear.csv"):
         df = pd.read_csv("./df_clear.csv")
     else:
         assert 'DataFrame not Found'
