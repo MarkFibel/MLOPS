@@ -45,7 +45,7 @@ def clear_data(path2df):
     Ordinal_encoded = ordinal.transform(df[cat_columns])
     df_ordinal = pd.DataFrame(Ordinal_encoded, columns=cat_columns)
     df[cat_columns] = df_ordinal[cat_columns]
-    df.to_csv('df_clear.csv')
+    df.to_csv('./df_clear.csv')
     return True
 
 download_data()
