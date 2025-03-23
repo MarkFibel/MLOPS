@@ -30,11 +30,7 @@ def eval_metrics(actual, pred):
 
 
 if __name__ == "__main__":
-    if os.path.isfile("./df_clear.csv"):
-        df = pd.read_csv("./df_clear.csv")
-    else:
-        assert 'DataFrame not Found'
-    df = pd.read_csv("./df_clear.csv")
+    df = pd.read_csv("df_clear.csv")
     X,Y, power_trans = scale_frame(df)
     X_train, X_val, y_train, y_val = train_test_split(X, Y,
                                                     test_size=0.3,
